@@ -7,7 +7,7 @@
       </button>
     </div>
   </div>
-  <div class="row">
+  <div class="row mx-3">
     <House v-for="house in houses" :key="house.id" :house="house" class="col-lg-3" />
   </div>
 

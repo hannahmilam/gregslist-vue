@@ -7,7 +7,7 @@
         </button>
       </div>
     </div>
-    <div class="row">
+    <div class="row mx-3">
       <!-- REVIEW PROPS -->
       <Car v-for="car in cars" :key="car.id" :car="car" class="col-lg-3" />
     </div>
