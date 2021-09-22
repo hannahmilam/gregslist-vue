@@ -3,12 +3,13 @@
     <router-link :to="{name: 'Car', params: { carId: car.id }}">
       <div class="card selectable">
         <!-- REVIEW PROPS -->
-        <img :src="car.img" alt="listing image" class="rounded">
+        <img :src="car.img" alt="listing image" class="rounded-top">
         <div class="card-body">
           <h5 class="d-flex justify-content-between">
-            <span>{{ car.year }} {{ car.make }} - {{ car.model }}</span>
-            <span>${{ car.price }}</span>
+            <span>{{ car.year }} {{ car.make }} {{ car.model }} </span>
+            <span> ${{ car.price }}</span>
           </h5>
+          <p>{{ car.description }}</p>
         </div>
       </div>
     </router-link>
@@ -34,6 +35,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="scss">
+img{
+  height: 250px;
+}
 </style>

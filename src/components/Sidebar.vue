@@ -3,7 +3,9 @@
     <div class="top-part">
       <div class="text-white py-3">
         <h3 class="">
+          <router-link class="selectable rounded p-2 text-light lighten-30" :to="{name: 'Home'}">
           Gregslist
+          </router-link>
         </h3>
       </div>
       <div class="links">

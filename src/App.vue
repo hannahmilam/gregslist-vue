@@ -2,7 +2,7 @@
   <main class="container-fluid">
     <div class="row">
       <Sidebar class="col-md-2" />
-      <div class="col-md-10 viewport">
+      <div class="col-md-10 viewport p-0">
         <router-view />
       </div>
     </div>

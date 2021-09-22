@@ -1,12 +1,13 @@
 <template>
-  <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-    <div class="home-card p-5 bg-white rounded elevation-1">
-      <img src="https://bcw.blob.core.windows.net/public/img/8600856373152463" alt="CodeWorks Logo" class="rounded-circle elevation-4">
-      <h1 class="my-5 bg-dark text-white p-3 rounded text-center">
-        Vue 3 Starter
-      </h1>
+<div class="container-fluid img" :style="{'background-image':'url(https://images.unsplash.com/photo-1465244554671-e501f19a3bb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)'}">
+    <div class="row justify-content-center pt-5 ps-2">
+      <div class="col-3">
+        <div class="card rounded-circle logo">
+          <img src="../assets/img/gregslist.png" alt="CodeWorks Logo" class="rounded-circle elevation-4">
+       </div> 
+      </div>
     </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -16,18 +17,18 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.home{
-  display: grid;
-  height: 80vh;
-  place-content: center;
-  text-align: center;
-  user-select: none;
-  .home-card{
-    width: 50vw;
-    > img{
-      height: 200px;
-      width: 200px;
+  .logo{
+    background-color: #022e509a;
+    backdrop-filter: blur(4px);
+    height: 250px;
+    width: 350px;
+    >img{
+      height: 250px;
+      width: 350px;
     }
   }
-}
+  .img{
+    background-size: cover;
+    height: 100vh;
+  }
 </style>

@@ -2,16 +2,15 @@
   <form @submit.prevent="handleSubmit">
     <div class="form-group">
       <label for="make" class="">Make:</label>
-      <select v-model="editable.make" name="make" id="make" required class="form-control">
-        <option disabled selected value="">
-          Please Choose your car make
-        </option>
-        <option>honda</option>
-        <option>hyundai</option>
-        <option>tesla</option>
-        <option>toyota</option>
-        <option>other</option>
-      </select>
+      <input 
+      v-model="editable.make" 
+      type="text"
+      class="form-control"
+      name="make" 
+      id="make" 
+      required
+      >
+       
     </div>
     <div class="form-group">
       <label for="model" class="">Model:</label>
@@ -36,7 +35,7 @@
       >
     </div>
     <div class="form-group">
-      <label for="year" class="">year:</label>
+      <label for="year" class="">Year:</label>
       <input v-model="editable.year" type="year" class="form-control" name="year" id="year">
     </div>
     <div class="form-group">
@@ -50,7 +49,7 @@
       ></textarea>
     </div>
     <div class="form-group">
-      <label for="img" class="">img:</label>
+      <label for="img" class="">Image URL:</label>
       <input v-model="editable.img"
              type="url"
              class="form-control"
@@ -65,7 +64,7 @@
           cancel
         </b>
       </button>
-      <button type="submit" class="btn text-primary text-uppercase selectable">
+      <button type="submit" data-bs-dismiss="modal" class="btn text-primary text-uppercase selectable">
         <b>
           submit
         </b>
@@ -103,8 +102,8 @@ export default {
             await carsService.editCar(editable.value)
           } else {
             await carsService.createCar(editable.value)
-          }
           editable.value = {}
+          }
         } catch (error) {
           Pop.toast(error.message, 'error')
         }
